@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/yuanmeng801/vue-ui/issues"
   },
-  "homepage": "https://github.com/yuanmeng801/vue-ui#readme"
+  "homepage": "https://github.com/yuanmeng801/vue-ui#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
