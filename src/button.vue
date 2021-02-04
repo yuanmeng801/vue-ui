@@ -1,5 +1,5 @@
 <template>
-  <button class="my-button" :class="{ [`icon-${iconPosition}`]: true }">
+  <button class="m-button" :class="{ [`icon-${iconPosition}`]: true }">
     <svg v-if="icon" class="icon" aria-hidden="true">
       <use :xlink:href="`#i-${icon}`"></use>
     </svg>
@@ -24,7 +24,7 @@ export default {
 };
 </script>
 <style lang="scss">
-.my-button {
+.m-button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
