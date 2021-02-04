@@ -15,7 +15,10 @@ export default {
     icon:{},
     iconPosition:{
       type:String,
-      default:'left'
+      default:'left',
+      validator(value){
+        return value==='left'||value==='right'
+      }
     }
   }
 };
