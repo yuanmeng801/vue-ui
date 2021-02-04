@@ -1,8 +1,6 @@
 <template>
   <button class="m-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <svg v-if="icon" class="icon" aria-hidden="true">
-      <use :xlink:href="`#i-${icon}`"></use>
-    </svg>
+    <m-icon :iconName="icon"></m-icon>
     <div class="content">
       <slot />
     </div>
@@ -10,17 +8,16 @@
 </template>
 <script>
 export default {
-  props: ["icon", "iconPosition"],
-  props:{
-    icon:{},
-    iconPosition:{
-      type:String,
-      default:'left',
-      validator(value){
-        return value==='left'||value==='right'
-      }
-    }
-  }
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: "left",
+      validator(value) {
+        return value === "left" || value === "right";
+      },
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -46,7 +43,7 @@ export default {
   }
   .icon {
     order: 1;
-    margin-right: .3em;
+    margin-right: 0.3em;
   }
   .content {
     order: 2;
@@ -55,7 +52,7 @@ export default {
 }
 .icon-right {
   .icon {
-    margin-left: .3em;
+    margin-left: 0.3em;
     margin-right: 0;
     order: 2;
   }
