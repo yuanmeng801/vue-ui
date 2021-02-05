@@ -1,10 +1,8 @@
 <template>
-  <svg v-if="iconName" class="icon" aria-hidden="true">
-    <use :xlink:href="`#i-${iconName}`"></use>
-  </svg>
+  <i :class="['icon', 'iconfont', `i-${iconName}`]"></i>
 </template>
 <script>
 export default {
-  props:['iconName']
-}
+  props: ["iconName"],
+};
 </script>

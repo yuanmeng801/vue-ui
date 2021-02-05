@@ -1,52 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-Hans">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>vue-ui</title>
-  <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    html {
-      --button-height: 32px;
-      --font-size: 14px;
-      --button-bg: white;
-      --button-active-bg: #eee;
-      --border-radius: 4px;
-      --color: #333;
-      --border-color: #999;
-      --border-color-hover: #666;
-    }
-    #app {
-      margin: 20px;
-    }
-    body {
-      font-size: var(--font-size);
-    }
-    .icon {
-       width: 1em; height: 1em;
-       vertical-align: -0.15em;
-    }
-  </style>
-  <style>
-  </style>
-</head>
-<body>
-<div id="app">
-  <m-button>
-    按钮
-  </m-button>
-  <m-button icon='plus' icon-position='left'>
-    按钮
-  </m-button>
-  <m-button icon='minus' icon-position='right'>
-    按钮
-  </m-button>
-  <m-button :loading=true icon-position='right'>
-    按钮
-  </m-button>
-</div>
-<script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_2366401_ef3un3izw7.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>vue-ui</title>
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_2366401_ef3un3izw7.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      :root {
+        --button-height: 32px;
+        --font-size: 14px;
+        --button-bg: white;
+        --button-active-bg: #eee;
+        --border-radius: 4px;
+        --color: rgba(0, 0, 0, 0.85);
+        --active-color: #097dd9;
+        --button-hover-color: #409eff;
+        --border-color: #d9d9d9;
+        --border-hover-color: #409eff;
+        --primary-bg: #409eff;
+        --primary-hover-bg: #40a9ff;
+        --primary-active-bg: #096dd9;
+        --border-ripple: #c0e0fc;
+      }
+      #app {
+        margin: 20px;
+      }
+      body {
+        font-size: var(--font-size);
+      }
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+      }
+      .wrap {
+        margin-bottom: 1em;
+      }
+    </style>
+    <style></style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="wrap">
+        <span>icon：</span>
+        <m-button>
+          按钮
+        </m-button>
+        <m-button icon="plus" icon-position="left">
+          按钮
+        </m-button>
+        <m-button icon="minus" icon-position="right">
+          按钮
+        </m-button>
+        <m-button icon="close" type="primary">
+          按钮
+        </m-button>
+      </div>
+      <div class="wrap">
+        <span>loading：</span>
+        <m-button :loading="true" icon-position="left">
+          按钮
+        </m-button>
+        <m-button :loading="true" icon-position="right">
+          按钮
+        </m-button>
+      </div>
+      <div class="wrap">
+        <span>按钮类型（type）：</span>
+        <m-button>默认按钮</m-button>
+        <m-button type="primary">主要按钮</m-button>
+        <m-button type="dashed">虚线按钮</m-button>
+        <m-button type="text">文字按钮</m-button>
+      </div>
+    </div>
+
+    <script src="./src/app.js"></script>
+  </body>
 </html>
