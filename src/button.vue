@@ -1,6 +1,6 @@
 <template>
   <button class="m-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <m-icon :iconName="icon"></m-icon>
+    <m-icon :class="icon" :iconName="icon"></m-icon>
     <div class="content">
       <slot />
     </div>
@@ -21,6 +21,10 @@ export default {
 };
 </script>
 <style lang="scss">
+@keyframes loading{
+  from{transform: rotate(0deg);}
+  to{transform: rotate(360deg);}
+}
 .m-button {
   display: inline-flex;
   justify-content: center;
@@ -48,6 +52,9 @@ export default {
   .content {
     order: 2;
     line-height: var(--font-size);
+  }
+  .loading{
+    animation: loading 1.5s infinite linear;
   }
 }
 .icon-right {
