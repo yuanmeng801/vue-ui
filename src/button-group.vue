@@ -19,7 +19,9 @@ export default {
   display: inline-flex;
   .m-button {
     border-radius: 0;
-    margin-right: -1px;
+    &:not(:first-child) {
+      margin-right: -1px;
+    }
     &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
