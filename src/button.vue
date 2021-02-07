@@ -82,7 +82,7 @@ export default {
     background-color: transparent;
     background-repeat: no-repeat;
     opacity: 0;
-    transition: all 0.45s linear;
+    transition: all 0.3s linear;
   }
   &:active:after {
     border: 0.1em;

@@ -48,11 +48,17 @@
       .wrap {
         margin-bottom: 1em;
       }
+      .title {
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 1em;
+      }
     </style>
     <style></style>
   </head>
   <body>
     <div id="app">
+      <p class="title">m-button组件</p>
       <div class="wrap">
         <span>icon：</span>
         <m-button>
@@ -83,6 +89,14 @@
         <m-button type="primary">主要按钮</m-button>
         <m-button type="dashed">虚线按钮</m-button>
         <m-button type="text">文字按钮</m-button>
+      </div>
+      <p class="title">m-button-group组件</p>
+      <div class="wrap">
+        <m-button-group>
+          <m-button icon="left">上一页</m-button>
+          <m-button>...</m-button>
+          <m-button icon="right" icon-position="right">下一页</m-button>
+        </m-button-group>
       </div>
     </div>
 
