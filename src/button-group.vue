@@ -4,12 +4,20 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  mounted() {
+    for (let node of this.$el.children) {
+      if (node.nodeName.toLowerCase() !== "button") {
+        console.warn("m-button-group组件必须直接使用m-button组件");
+      }
+    }
+  },
+};
 </script>
 <style lang="scss">
 .m-button-group {
   display: inline-flex;
-  > .m-button {
+  .m-button {
     border-radius: 0;
     margin-right: -1px;
     &:first-child {

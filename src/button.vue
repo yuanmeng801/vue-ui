@@ -55,7 +55,7 @@ export default {
   font-size: var(--font-size);
   height: var(--button-height);
   vertical-align: middle;
-  padding: 0 1em;
+  padding: 0 0.9em;
   border-radius: var(--border-radius);
   .icon {
     order: 1;
